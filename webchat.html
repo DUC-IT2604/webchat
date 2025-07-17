@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Web Trò Chuyện & Bình Luận</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Trò Chuyện Của Bạn</h1>
+
+      <div class="chat-window">
+        <div id="messages" class="messages"></div>
+        <input type="text" id="messageInput" placeholder="Nhập tin nhắn..." />
+        <button id="sendMessageBtn">Gửi</button>
+      </div>
+
+      <div class="comment-section">
+        <h2>Đánh Giá & Bình Luận</h2>
+        <div class="comment-form">
+          <input type="text" id="usernameInput" placeholder="Tên của bạn..." />
+          <textarea
+            id="commentTextInput"
+            placeholder="Viết bình luận của bạn..."
+          ></textarea>
+          <div class="rating">
+            <span>Đánh giá: </span>
+            <span class="star" data-value="1">⭐</span>
+            <span class="star" data-value="2">⭐</span>
+            <span class="star" data-value="3">⭐</span>
+            <span class="star" data-value="4">⭐</span>
+            <span class="star" data-value="5">⭐</span>
+          </div>
+          <button id="postCommentBtn">Đăng Bình Luận</button>
+        </div>
+        <div id="comments" class="comments"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
