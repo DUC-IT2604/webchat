@@ -1,0 +1,167 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 20px 0;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Chat Window */
+.chat-window {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+}
+
+.messages {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  display: flex; /* Dùng flexbox cho tin nhắn */
+  flex-direction: column; /* Xếp tin nhắn theo cột */
+}
+
+.message-item {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border-radius: 15px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+/* Tin nhắn của chính người dùng (client) */
+.message-item.me {
+  background-color: #dcf8c6;
+  align-self: flex-end; /* Đẩy tin nhắn sang phải */
+  margin-left: auto;
+}
+
+/* Tin nhắn từ người dùng khác (server) */
+.message-item.other {
+  background-color: #e0e0e0;
+  align-self: flex-start; /* Đẩy tin nhắn sang trái */
+  margin-right: auto;
+}
+
+#messageInput {
+  width: calc(100% - 90px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+#sendMessageBtn {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#sendMessageBtn:hover {
+  background-color: #218838;
+}
+
+/* Comment Section */
+.comment-section {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  background-color: #f9f9f9;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.comment-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.star.selected {
+  color: #ffc107; /* Màu vàng khi được chọn */
+}
+
+#postCommentBtn {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#postCommentBtn:hover {
+  background-color: #0056b3;
+}
+
+.comments {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.comment-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.comment-item strong {
+  color: #555;
+}
+
+.comment-item .comment-rating {
+  color: #ffc107;
+  margin-left: 5px;
+}
